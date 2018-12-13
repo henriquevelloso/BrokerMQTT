@@ -1,0 +1,11 @@
+.DS_Store
+Build/
+Pods/
+
+Broker MQTT.xcodeproj/project.xcworkspace/
+Broker MQTT.xcodeproj/xcuserdata/
+Broker MQTT.xcworkspace/
+
+!Pods/Target Support Files/Pods/Pods-resources.sh
+
+
