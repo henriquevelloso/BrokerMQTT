@@ -17,7 +17,13 @@
 		C519D8B021C2F0C40025C11B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8AF21C2F0C40025C11B /* DetailViewController.swift */; };
 		C519D8B221C2F1710025C11B /* BrokerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8B121C2F1710025C11B /* BrokerViewController.swift */; };
 		C519D8B421C2F2970025C11B /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8B321C2F2970025C11B /* NotificationViewController.swift */; };
-		C519D8B621C2F3C30025C11B /* mqtt.plist in Resources */ = {isa = PBXBuildFile; fileRef = C519D8B521C2F3C30025C11B /* mqtt.plist */; };
+		C519D8B621C2F3C30025C11B /* MQTT_Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C519D8B521C2F3C30025C11B /* MQTT_Config.plist */; };
+		C519D8BB21C3140D0025C11B /* BrokerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8BA21C3140D0025C11B /* BrokerManager.swift */; };
+		C519D8BE21C33FD90025C11B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8BD21C33FD90025C11B /* Extensions.swift */; };
+		C519D8C021C3CB040025C11B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8BF21C3CB040025C11B /* ProductCell.swift */; };
+		C519D8C221C3CC810025C11B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8C121C3CC810025C11B /* Product.swift */; };
+		C519D8C821C3D6670025C11B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8C721C3D6670025C11B /* TableViewCell.swift */; };
+		C519D8CA21C3F92E0025C11B /* ProductCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D8C921C3F92E0025C11B /* ProductCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +41,13 @@
 		C519D8AF21C2F0C40025C11B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C519D8B121C2F1710025C11B /* BrokerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokerViewController.swift; sourceTree = "<group>"; };
 		C519D8B321C2F2970025C11B /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
-		C519D8B521C2F3C30025C11B /* mqtt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mqtt.plist; sourceTree = "<group>"; };
+		C519D8B521C2F3C30025C11B /* MQTT_Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MQTT_Config.plist; sourceTree = "<group>"; };
+		C519D8BA21C3140D0025C11B /* BrokerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokerManager.swift; sourceTree = "<group>"; };
+		C519D8BD21C33FD90025C11B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C519D8BF21C3CB040025C11B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		C519D8C121C3CC810025C11B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C519D8C721C3D6670025C11B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C519D8C921C3F92E0025C11B /* ProductCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +102,10 @@
 			children = (
 				C519D89721C2BE440025C11B /* AppDelegate.swift */,
 				C519D89B21C2BE440025C11B /* Main.storyboard */,
+				C519D8B721C313730025C11B /* Model */,
 				C519D8A921C2DC550025C11B /* ViewControllers */,
 				C519D8AC21C2DE490025C11B /* Resources */,
+				C519D8BC21C33FC40025C11B /* Tools */,
 			);
 			path = "Broker MQTT";
 			sourceTree = "<group>";
@@ -104,6 +118,8 @@
 				C519D8AF21C2F0C40025C11B /* DetailViewController.swift */,
 				C519D8B121C2F1710025C11B /* BrokerViewController.swift */,
 				C519D8B321C2F2970025C11B /* NotificationViewController.swift */,
+				C519D8BF21C3CB040025C11B /* ProductCell.swift */,
+				C519D8C721C3D6670025C11B /* TableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,12 +127,30 @@
 		C519D8AC21C2DE490025C11B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C519D8B521C2F3C30025C11B /* mqtt.plist */,
+				C519D8B521C2F3C30025C11B /* MQTT_Config.plist */,
 				C519D89E21C2BE460025C11B /* Assets.xcassets */,
 				C519D8A021C2BE460025C11B /* LaunchScreen.storyboard */,
 				C519D8A321C2BE460025C11B /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C519D8B721C313730025C11B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C519D8BA21C3140D0025C11B /* BrokerManager.swift */,
+				C519D8C121C3CC810025C11B /* Product.swift */,
+				C519D8C921C3F92E0025C11B /* ProductCollection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C519D8BC21C33FC40025C11B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C519D8BD21C33FD90025C11B /* Extensions.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +215,7 @@
 			files = (
 				C519D8A221C2BE460025C11B /* LaunchScreen.storyboard in Resources */,
 				C519D89F21C2BE460025C11B /* Assets.xcassets in Resources */,
-				C519D8B621C2F3C30025C11B /* mqtt.plist in Resources */,
+				C519D8B621C2F3C30025C11B /* MQTT_Config.plist in Resources */,
 				C519D89D21C2BE440025C11B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,15 +254,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Broker MQTT/Pods-Broker MQTT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
 				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
-				"${BUILT_PRODUCTS_DIR}/MQTTClient/MQTTClient.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MQTTClient.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -245,9 +281,15 @@
 				C519D8AE21C2F05E0025C11B /* ProductsViewController.swift in Sources */,
 				C519D8AB21C2DCA60025C11B /* LoginViewController.swift in Sources */,
 				C519D8B421C2F2970025C11B /* NotificationViewController.swift in Sources */,
+				C519D8BE21C33FD90025C11B /* Extensions.swift in Sources */,
 				C519D89821C2BE440025C11B /* AppDelegate.swift in Sources */,
 				C519D8B221C2F1710025C11B /* BrokerViewController.swift in Sources */,
+				C519D8C821C3D6670025C11B /* TableViewCell.swift in Sources */,
+				C519D8C021C3CB040025C11B /* ProductCell.swift in Sources */,
+				C519D8C221C3CC810025C11B /* Product.swift in Sources */,
 				C519D8B021C2F0C40025C11B /* DetailViewController.swift in Sources */,
+				C519D8BB21C3140D0025C11B /* BrokerManager.swift in Sources */,
+				C519D8CA21C3F92E0025C11B /* ProductCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DNPZJLD62G;
 				INFOPLIST_FILE = "$(SRCROOT)/Broker MQTT/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -416,6 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DNPZJLD62G;
 				INFOPLIST_FILE = "$(SRCROOT)/Broker MQTT/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

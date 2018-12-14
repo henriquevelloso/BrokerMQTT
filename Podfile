@@ -5,7 +5,7 @@ platform :ios, '9.0'
 target 'Broker MQTT' do
   use_frameworks!
 
-  	pod 'MQTTClient'			#https://github.com/novastone-media/MQTT-Client-Framework
+  	pod 'CocoaMQTT'			    #https://github.com/emqtt/CocoaMQTT
 	pod 'Hue'				    #https://github.com/hyperoslo/Hue
 
 end
